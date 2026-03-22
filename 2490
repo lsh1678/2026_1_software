@@ -1,0 +1,14 @@
+for _ in range(3):
+    y = list(map(int, input().split()))
+    cnt = y.count(0)
+    
+    if cnt == 0:
+        print('E')
+    elif cnt == 1:
+        print('A')
+    elif cnt == 2:
+        print('B')
+    elif cnt == 3:
+        print('C')
+    else:
+        print('D')
