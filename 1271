@@ -1,0 +1,6 @@
+m, n = map(int, input().split())
+1000 100
+print(m // n)
+10
+print(m % n)
+0
