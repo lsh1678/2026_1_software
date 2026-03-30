@@ -1,0 +1,18 @@
+word = input()
+s = 0
+
+for c in word:
+    if 'a' <= c <= 'z':
+        s += ord(c) - 96
+    else:
+        s += ord(c) - 38
+
+if s == 1:
+    print("It is a prime word.")
+else:
+    for i in range(2, s):
+        if s % i == 0:
+            print("It is not a prime word.")
+            break
+    else:
+        print("It is a prime word.")
