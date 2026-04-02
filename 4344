@@ -1,0 +1,16 @@
+C = int(input())
+
+for _ in range(C):
+    t = list(map(int, input().split()))
+    N = t[0]
+    scores = t[1:]
+    
+    average = sum(scores) / N
+
+    count = 0
+    for s in scores:
+        if s > average:
+            count += 1
+
+    percent = (count / N) * 100
+    print(f"{percent:.3f}%")
