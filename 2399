@@ -1,0 +1,11 @@
+N = int(input())
+nums = list(map(int, input().split()))
+nums.sort()
+
+result = 0
+
+for i in range(N):
+    result += nums[i] * i - sum(nums[:i])
+    result += sum(nums[i+1:]) - nums[i] * (N - i - 1)
+
+print(result)
