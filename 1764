@@ -1,0 +1,17 @@
+N, M = map(int, input().split())
+
+A = set()
+for _ in range(N):
+    A.add(input())
+
+B = set()
+for _ in range(M):
+    B.add(input())
+
+result = A & B
+
+result = sorted(result)
+
+print(len(result))
+for name in result:
+    print(name)
