@@ -1,16 +1,18 @@
-K, L = map(int, input().split())
+import sys
 
-students = {}
+K, L = map(int, sys.stdin.readline().split())
 
-for i in range(L):
-    student = input()
-    students[student] = i
+arr = [sys.stdin.readline().strip() for _ in range(L)]
 
-result = sorted(students.items(), key=lambda x: x[1])
+seen = set()
+result = []
 
-count = 0
-for student, _ in result:
-    if count == K:
-        break
-    print(student)
-    count += 1
+for i in range(L-1, -1, -1):
+    if arr[i] not in seen:
+        seen.add(arr[i])
+        result.append(arr[i])
+
+result.reverse()
+
+for i in range(min(K, len(result))):
+    print(result[i])
