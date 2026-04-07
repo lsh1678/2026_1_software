@@ -1,0 +1,19 @@
+N = int(input())
+people = {}
+
+for _ in range(N):
+    name, action = input().split()
+    
+    if action == "enter":
+        people[name] = True
+    else:
+        people[name] = False
+
+result = []
+
+for name in people:
+    if people[name]:
+        result.append(name)
+
+for name in sorted(result, reverse=True):
+    print(name)
