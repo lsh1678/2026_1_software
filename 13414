@@ -1,0 +1,16 @@
+K, L = map(int, input().split())
+
+students = {}
+
+for i in range(L):
+    student = input()
+    students[student] = i
+
+result = sorted(students.items(), key=lambda x: x[1])
+
+count = 0
+for student, _ in result:
+    if count == K:
+        break
+    print(student)
+    count += 1
